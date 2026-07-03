@@ -3,35 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BYU-Pathway Worldwide Programs</title>
+  <title>BYU-Pathway Worldwide Programs Hub</title>
   <link rel="stylesheet" href="styles/shared.css" />
-  <style>
-    /* Hub-only overrides */
-    html, body { min-height: 100%; background: var(--off-white); }
-  </style>
+  <link rel="stylesheet" href="styles/hub.css" />
 </head>
 <body class="topo-bg">
 
-  <!-- HEADER -->
   <header class="site-header">
-
     <a class="header-brand" href="index.html">
-        <img src="images/logo-tb.png" class="header-flame" alt="BYU-Pathway Worldwide" />
-
-        <div class="header-title">BYU-Pathway Worldwide Programs
-        </div>
+      <img src="/images/logo-tb.png" class="header-flame" alt="BYU-Pathway Worldwide" />
+      <div class="header-title">BYU-Pathway Worldwide Programs</div>
     </a>
   </header>
 
-  <main class="hub-page">
 
-    <!-- HERO -->
+  <main class="hub-page">
     <section class="hub-hero">
       <p class="hub-eyebrow">Certificate First</p>
       <h1 class="hub-headline">Find Your Path</h1>
       <p class="hub-sub">Every degree starts with one certificate. Explore what each path leads to.</p>
-
-      <!-- FILTERS -->
       <div class="hub-filters">
         <button class="filter-pill active" data-filter="all">All</button>
         <button class="filter-pill" data-filter="technology">Technology</button>
@@ -41,10 +31,8 @@
       </div>
     </section>
 
-    <!-- CARD GRID -->
     <div class="hub-grid">
 
-      <!-- Information Technology -->
       <div class="degree-card" data-category="technology">
         <img class="card-image" src="images/hub/1-Bachelor-of-Applied-Science-Information-Technology.png" alt="Information Technology" />
         <div class="card-body">
@@ -57,7 +45,6 @@
         </div>
       </div>
 
-      <!-- Software Development -->
       <div class="degree-card" data-category="technology">
         <img class="card-image" src="images/hub/2-Bachelor-of-Applied-Science-Software-Development.png" alt="Software Development" />
         <div class="card-body">
@@ -70,7 +57,6 @@
         </div>
       </div>
 
-      <!-- Applied Business Management -->
       <div class="degree-card" data-category="business">
         <img class="card-image" src="images/hub/3-Bachelor-of-Applied-Science-Applied-Business-Management.png" alt="Applied Business Management" />
         <div class="card-body">
@@ -83,7 +69,6 @@
         </div>
       </div>
 
-      <!-- Communication -->
       <div class="degree-card" data-category="communication">
         <img class="card-image" src="images/hub/4-Bachelor-of -Science-Communication.png" alt="Communication" />
         <div class="card-body">
@@ -96,7 +81,6 @@
         </div>
       </div>
 
-      <!-- Applied Health -->
       <div class="degree-card" data-category="health">
         <img class="card-image" src="images/hub/5-Bachelor-of-Applied-Science-Applied-Health.png" alt="Applied Health" />
         <div class="card-body">
@@ -109,7 +93,6 @@
         </div>
       </div>
 
-      <!-- Professional Studies -->
       <div class="degree-card" data-category="all">
         <img class="card-image" src="images/hub/6-Bachelor-of-Applied-Science-Professional-Studies.png" alt="Professional Studies" />
         <div class="card-body">
@@ -125,22 +108,19 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="hub-footer">
     <span class="hub-footer-text">Offered through BYU-Idaho &amp; Ensign College via BYU-Pathway Worldwide</span>
     <span class="hub-footer-text">6 degrees &middot; 13+ starting certificates</span>
   </footer>
 
   <script>
-    // Filter pills
     document.querySelectorAll('.filter-pill').forEach(function (pill) {
       pill.addEventListener('click', function () {
         document.querySelectorAll('.filter-pill').forEach(function (p) { p.classList.remove('active'); });
         pill.classList.add('active');
         var filter = pill.dataset.filter;
         document.querySelectorAll('.degree-card').forEach(function (card) {
-          var show = filter === 'all' || card.dataset.category === filter;
-          card.style.display = show ? '' : 'none';
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
         });
       });
     });
