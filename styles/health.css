@@ -1,0 +1,29 @@
+/* ═══════════════════════════════════════
+   APPLIED HEALTH DECK
+   Health Analysis Certificate
+   ═══════════════════════════════════════ */
+
+/* Health outcome cards — green left border variant */
+.health-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid #2a8a6a;
+    border-radius: 6px;
+    padding: 14px 16px;
+}
+
+.health-card .card-tag {
+    color: #2a8a6a;
+}
+
+/* Outcome icon row */
+.outcome-icon {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Career card left border — health green */
+.career-card.health-green {
+    border-left-color: #2a8a6a;
+}

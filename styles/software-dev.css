@@ -1,0 +1,30 @@
+/* ═══════════════════════════════════════
+   SOFTWARE DEVELOPMENT DECK
+   Web & Computer Programming Certificate
+   ═══════════════════════════════════════ */
+
+/* Accent colour override — slightly more purple-blue for tech/dev */
+.sd-accent { color: #1565a0; }
+
+/* Code pill — used in course list to highlight languages */
+.code-pill {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: .62rem;
+    font-weight: 700;
+    background: var(--teal-dark);
+    color: var(--gold);
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: .04em;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+/* Tech stack pills row */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
