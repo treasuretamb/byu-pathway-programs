@@ -1,0 +1,28 @@
+/* ═══════════════════════════════════════
+   SOCIAL MEDIA MARKETING DECK
+   ═══════════════════════════════════════ */
+
+/* Platform pill — highlights specific social platform names */
+.platform-pill {
+    display: inline-block;
+    font-family: var(--heading);
+    font-size: .6rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--teal-pale);
+    border: 1px solid var(--teal);
+    color: var(--teal-dark);
+    margin: 2px;
+}
+
+/* Stat highlight — big number on skills slide */
+.smm-stat {
+    font-family: var(--heading);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--teal);
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+}
